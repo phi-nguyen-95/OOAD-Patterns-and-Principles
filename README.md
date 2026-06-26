@@ -2,6 +2,7 @@
 Project Overview
 This project is an Object-Oriented Analysis and Design capstone project that simulates a car dealership system using multiple design patterns in Java.
 The dealership simulation is built on top of a previous Command Pattern project and extends the system by adding a clock-driven staff workflow. The simulation runs for 10 days, from 8 AM to 7 PM each day. During each hour, customers arrive with random requests such as ordering, servicing, or buying a car.
+
 The project demonstrates the use of the following design patterns:
 Command Pattern
 Factory Pattern
@@ -17,28 +18,34 @@ Assigns customer requests to available staff members
 Calculates staff bonuses based on completed actions
 Prints detailed simulation activity to the console
 Provides a final summary report for each staff member
+
 Design Patterns Used
 Command Pattern
 The Command Pattern is used to represent customer requests as command objects.
+
 Examples of commands include:
 orderCar
 serviceCar
 buyCar
+
 Each command is executed by a staff member and applied to a selected car object.
 Factory Pattern
 The Factory Pattern is used to create different types of cars.
 The simulation uses two factories:
 USFactory
 JapanFactory
+
 These factories create different car objects used in customer requests.
 Singleton Pattern
 Two classes are implemented as Singletons:
 Clock
 The Clock class uses an eager Singleton implementation. The clock instance is created when the program starts.
 The clock controls the simulation time and notifies staff members when the time changes.
+
 Invoker
 The Invoker class uses a lazy Singleton implementation. The invoker instance is created only when it is first requested.
 The invoker receives command requests and assigns them to available staff members.
+
 State Pattern
 The State Pattern is used to manage staff availability during the day.
 Each staff member can be in one of the following states:
@@ -47,6 +54,7 @@ Arriving
 Available
 Lunch
 Staff members change states based on the current time and their assigned schedule.
+
 Observer Pattern
 The Observer Pattern is used between the Clock and the Staff objects.
 The Clock acts as the Subject.
@@ -73,6 +81,7 @@ Initialized	NotIn	NotIn	NotIn	NotIn
 5	NotIn	NotIn	Available	Available
 6	NotIn	NotIn	NotIn	Available
 7	NotIn	NotIn	NotIn	NotIn
+
 Simulation Flow
 The simulation follows these steps:
 Create a Simulation object.
@@ -132,39 +141,8 @@ Deb:
  Services: 8
  Sales: 11
  Bonus: $10830
-How to Run
-Clone the repository:
-git clone https://github.com/your-username/your-repository-name.git
-Open the project in your Java IDE.
-Compile the Java files.
-Run the main program.
-The main method should create and run the simulation:
-public class Main {
-    public static void main(String[] args) {
-        Simulation simulation = new Simulation();
-        simulation.run();
-    }
-}
-Project Structure
-src/
-├── Main.java
-├── Simulation.java
-├── Clock.java
-├── Invoker.java
-├── Staff.java
-├── State.java
-├── NotInState.java
-├── ArrivingState.java
-├── AvailableState.java
-├── LunchState.java
-├── Command.java
-├── OrderCarCommand.java
-├── ServiceCarCommand.java
-├── BuyCarCommand.java
-├── Car.java
-├── USFactory.java
-├── JapanFactory.java
-└── ...
+
+
 Requirements
 Java
 JUnit for testing
