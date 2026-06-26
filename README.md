@@ -68,19 +68,6 @@ Cal	10	2	6
 Deb	11	3	7
 Staff States by Time
 Time	Ann	Bob	Cal	Deb
-Initialized	NotIn	NotIn	NotIn	NotIn
-8	Arriving	NotIn	NotIn	NotIn
-9	Available	Arriving	NotIn	NotIn
-10	Available	Available	Arriving	NotIn
-11	Available	Available	Available	Arriving
-12	Lunch	Available	Available	Available
-1	Available	Lunch	Available	Available
-2	Available	Available	Lunch	Available
-3	Available	Available	Available	Lunch
-4	NotIn	Available	Available	Available
-5	NotIn	NotIn	Available	Available
-6	NotIn	NotIn	NotIn	Available
-7	NotIn	NotIn	NotIn	NotIn
 
 Simulation Flow
 The simulation follows these steps:
@@ -149,6 +136,7 @@ JUnit for testing
 Coursera coding environment or any Java IDE
 Testing
 The autograder should be able to instantiate a Simulation object and call the run() method.
+
 Example:
 Simulation simulation = new Simulation();
 simulation.run();
