@@ -1,5 +1,6 @@
 # OOAD-Patterns-and-Principles
-Project Overview
+Project Overview:
+
 This project is an Object-Oriented Analysis and Design capstone project that simulates a car dealership system using multiple design patterns in Java.
 The dealership simulation is built on top of a previous Command Pattern project and extends the system by adding a clock-driven staff workflow. The simulation runs for 10 days, from 8 AM to 7 PM each day. During each hour, customers arrive with random requests such as ordering, servicing, or buying a car.
 
@@ -9,6 +10,7 @@ Factory Pattern
 Singleton Pattern
 State Pattern
 Observer Pattern
+
 Features
 Simulates a car dealership for 10 business days
 Uses a clock system to control staff availability
@@ -20,6 +22,7 @@ Prints detailed simulation activity to the console
 Provides a final summary report for each staff member
 
 Design Patterns Used
+
 Command Pattern
 The Command Pattern is used to represent customer requests as command objects.
 
@@ -27,15 +30,15 @@ Examples of commands include:
 orderCar
 serviceCar
 buyCar
-
 Each command is executed by a staff member and applied to a selected car object.
+
 Factory Pattern
 The Factory Pattern is used to create different types of cars.
 The simulation uses two factories:
 USFactory
 JapanFactory
-
 These factories create different car objects used in customer requests.
+
 Singleton Pattern
 Two classes are implemented as Singletons:
 Clock
@@ -60,6 +63,7 @@ The Observer Pattern is used between the Clock and the Staff objects.
 The Clock acts as the Subject.
 The Staff objects act as Observers.
 When the clock time changes, it notifies all staff members. Each staff member then updates their state if needed.
+
 Staff Schedule
 Staff	Arrival Time	Lunch Time	Leave Time
 Ann	8	12	4
@@ -85,6 +89,7 @@ Use the invoker to assign the request to an available staff member.
 Execute the command.
 Track each staff member’s completed orders, services, sales, and bonus.
 Print a final summary report.
+
 Example Console Output
 Day 1
 Ann moved to Arriving at 8
